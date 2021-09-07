@@ -1,0 +1,277 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+button {
+    padding: 0.5rem 2.5rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+   
+}
+
+button img{
+    width: 20px;
+}
+img{
+    width: 100%;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+:root{
+    --primary : #a2ba43;
+    --secondary:#fabe4c;
+    --dark : #363958;
+    --text : #a4a5b3;
+    --white : #fff;
+    --bg : #fffbf0;
+    --product-bg: #f1f1f1;
+}
+
+
+/* Header start */
+header{
+    padding: 2rem 0rem;
+    background-color: var(--bg);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+   width: 15rem; 
+}
+.menu{
+    width: 50%;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu li a{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+
+.humburger {
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .humburger {
+        display: block;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    button {
+        padding: 0.4rem 2rem;
+        font-size: 0.75rem;
+       
+    }
+
+   
+}
+
+.humburger div{
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--dark);
+    margin: 3px;
+}
+/* Header end */
+
+
+/* Hero area start  */
+.hero-area{
+    background-color: var(--bg);
+}
+.hero-content{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width : 768px) {
+    .hero-content{
+        flex-direction: column;
+    }
+}
+
+.hero-text h2{
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bolder;
+    letter-spacing: 0px;
+}
+.hero-text h2:nth-child(1){
+    color: var(--secondary);
+}
+.hero-text h2:nth-child(2){
+    color: var(--dark);
+}
+
+.hero-text p{
+    font-size: 1rem;
+    color: var(--text);
+    padding: 1rem 0rem;
+    width: 70%;
+}
+/* Hero area end  */
+
+/* Woman Product start */
+
+.woman-jacket,
+.Man-jacket,
+.services-area{
+    padding: 2rem 0rem;
+}
+.woman-jacket h2,
+.Man-jacket h2{
+    font-size: 2rem;
+    color: var(--dark);
+    margin: 1.5rem 0rem;
+    text-transform: uppercase;
+}
+
+.product-container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat( auto-fit , minmax(280px ,1fr));
+    grid-gap: 2rem;
+}
+@media (max-width: 768px) {
+    .product-container{
+        grid-template-columns: repeat( auto-fit , minmax(250px ,1fr));
+    }
+}
+
+.product-item{
+    /* border: 0.05px solid #ddd; */
+    padding: 1.2rem;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.product-item >img{
+    height: 250px;
+    object-fit: contain;
+    background-color: var(--product-bg);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.product_title{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--dark);
+    margin: 0.5rem 0rem;
+}
+
+.product_discription{
+    font-size: 13px;
+    color: var(--text);
+}
+
+.btn-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.product_price{
+    color: var(--secondary);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+
+/* Service area start here */
+
+.services-container{
+    display: grid;
+    grid-template-columns: 2.4fr 3fr;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .services-container{
+        grid-template-columns: 1fr;
+    }
+
+    .box_item{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .box_item .img-area{
+        padding: 0;
+    }
+}
+.box_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.625rem;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+}
+.box_item .img-area{
+    padding: 1rem;
+}
+.box_item .img-area > img{
+    height: 85px;
+    width: 85px;
+}
+
+.text-area {
+    padding: 1rem;
+}
+.text-area h4{
+    color: var(--dark);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.text-area p{
+    color: #363958;
+    font-size: 0.875rem;
+    
+}
+/* Service area ends here */
